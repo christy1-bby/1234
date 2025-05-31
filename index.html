@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StyleCrate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <button id="desktopSidebarToggle" class="btn btn-outline-light me-2 d-none d-lg-inline-block">
+        <i class="bi bi-list"></i>
+      </button>
+      <a class="navbar-brand" href="#hero">StyleCrate</a>
+    </div>
+    <button id="sidebarToggleBtn" class="btn btn-dark d-lg-none me-2" aria-label="Open sidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebarBtn" class="close-btn" aria-label="Close sidebar">&times;</button>
+    <ul class="sidebar-nav">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#modal">Special Offer</a></li>
+      <li><a href="#accordion">DOCUMENTATION</a></li>
+      <li><a href="#carousel">Featured Styles and Delivery</a></li>
+      <li><a href="#typography">Our AIM</a></li>
+      <li><a href="#tooltip">Need Help?</a></li>
+      <li><a href="#list">Subscription Benefits</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Sidebar overlay -->
+  <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+  <!-- Hero Section -->
+  <div id="hero" class="hero text-center py-5 bg-light" role="banner" aria-label="StyleCrate Banner">
+    <h1>Welcome to StyleCrate</h1>
+    <p class="lead">Your Personal Fashion Box — Delivered Monthly</p>
+  </div>
+
+  <div class="container">
+
+    <!-- Modal Section -->
+    <section id="modal" class="my-5">
+      <h2>Special Offer</h2>
+      <p class="text-center mb-4 fs-5">Try StyleCrate’s exclusive first box free — curated just for your style!</p>
+      <div class="text-center">
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#offerModal">View Offer</button>
+      </div>
+      <div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="offerModalLabel">First Box Free!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fs-6">
+              Sign up today and receive a complimentary fashion box with handpicked pieces tailored to your unique taste. Discover emerging designers and timeless classics.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Choose Your Plan</h2>
+        <div class="row justify-content-center g-4">
+          <!-- Monthly Plan -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Monthly Plan</h5>
+                <h3 class="text-primary">$49<span class="fs-6">/month</span></h3>
+                <p class="text-muted">Cancel anytime</p>
+                <ul class="list-unstyled text-start">
+                  <li>✔ 1 Curated Fashion Box</li>
+                  <li>✔ Free Shipping & Returns</li>
+                  <li>✔ Personal Stylist Access</li>
+                </ul>
+                <button class="btn btn-outline-primary mt-3">Subscribe Monthly</button>
+              </div>
+            </div>
+          </div>
+          <!-- 6-Month Plan -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-primary border-2">
+              <div class="card-body">
+                <h5 class="card-title">6-Month Plan</h5>
+                <h3 class="text-primary">$269<span class="fs-6">/6 months</span></h3>
+                <p class="text-muted">Save 10% vs monthly</p>
+                <ul class="list-unstyled text-start">
+                  <li>✔ 6 Fashion Boxes</li>
+                  <li>✔ Early Access to Trends</li>
+                  <li>✔ Bonus Accessories</li>
+                </ul>
+                <button class="btn btn-primary mt-3">Subscribe 6 Months</button>
+              </div>
+            </div>
+          </div>
+          <!-- Yearly Plan -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Yearly Plan</h5>
+                <h3 class="text-primary">$499<span class="fs-6">/year</span></h3>
+                <p class="text-muted">Best value - Save 15%</p>
+                <ul class="list-unstyled text-start">
+                  <li>✔ 12 Monthly Boxes</li>
+                  <li>✔ Exclusive Designer Picks</li>
+                  <li>✔ Free Seasonal Apparel</li>
+                </ul>
+                <button class="btn btn-outline-primary mt-3">Subscribe Yearly</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="accordion" class="my-5">
+      <h2>DOCUMENTATION</h2>
+      <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              What is StyleCrate?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              StyleCrate is a monthly subscription box featuring curated fashion pieces, accessories, and styling tips selected just for you.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              How do I personalize my style box?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              After subscribing, you'll complete a short style quiz to help our stylists understand your preferences and tailor your box accordingly.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              Can I return items I don't like?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Absolutely! We offer free returns and exchanges so you only keep what you love.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section id="carousel" class="my-5">
+      <h2>Featured Styles and Delivery</h2>
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 850px; margin: 0 auto;">
+        <div class="carousel-inner rounded-4 shadow-sm">
+          <div class="carousel-item active">
+            <img src="img/Clothing rack with styling on photoshoot set.jpeg" class="d-block w-100 img-fluid" alt="Stylish Outfit">
+          </div>
+          <div class="carousel-item">
+            <img src="img/download.jpeg" class="d-block w-100 img-fluid" alt="Fashion Accessories">
+          </div>
+          <div class="carousel-item">
+            <img src="img/The Best Fashion of 2024 (1).jpeg" class="d-block w-100 img-fluid" alt="Seasonal Fashion Box">
+          </div>
+           <div class="carousel-item">
+            <img src="img/Courier Guy Delivering Parcel Boxes.jpeg" class="d-block w-100 img-fluid" alt=" Fashion Box">
+          </div>
+           <div class="carousel-item">
+            <img src="img/Full tutorial available in my reels course_ curiouschitra_com.jpeg" class="d-block w-100 img-fluid" alt="tutorial Fashion Box">
+          </div>
+
+
+          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section id="typography" class="my-5">
+      <h2>Our AIM</h2>
+      <p class="lead">
+        StyleCrate is all about making fashion personal, fun, and effortless. Every month, we handpick high-quality pieces that reflect your individual style and help you express yourself with confidence.
+      </p>
+    </section>
+
+    <!-- Tooltip Section -->
+    <section id="tooltip" class="my-5 text-center">
+      <h2>Need Help?</h2>
+      <p class="mb-3 fs-5">Have questions or need styling tips? Our team is here for you.</p>
+      <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Reach us anytime via email or chat. We’re happy to help with styling and sizing!">
+        Hover for support info
+      </button>
+    </section>
+
+    <!-- List Section -->
+    <section id="list" class="my-5">
+      <h2>Subscription Benefits</h2>
+      <ul class="list-group mx-auto" style="max-width: 600px;">
+        <li class="list-group-item active">Exclusive Clothing & Accessories</li>
+        <li class="list-group-item">Tailored Style Picks Every Month</li>
+        <li class="list-group-item">Free Shipping & Hassle-Free Returns</li>
+        <li class="list-group-item">Early Access to Limited Releases</li>
+        <li class="list-group-item">One-on-One Styling Advice</li>
+      </ul>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="my-5">
+      <h2>Contact Us</h2>
+      <p class="lead text-center mb-4">
+        Have a question or want to get styled? Reach out!
+      </p>
+      <form>
+        <div class="mb-3">
+          <label for="contactName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="contactName" placeholder="Your full name" required />
+        </div>
+        <div class="mb-3">
+          <label for="contactEmail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required />
+        </div>
+        <div class="mb-3">
+          <label for="contactMessage" class="form-label">Message</label>
+          <textarea class="form-control" id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    Developed by Idowu Christiana odunayo. All rights reserved.
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="successToast" class="toast-notification" role="alert" aria-live="assertive" aria-atomic="true" hidden>
+    <span class="toast-icon" aria-hidden="true">&#10003;</span>
+    <div class="toast-content">
+      <strong>Success!</strong> Thank you for reaching out to StyleCrate! We’ll get back to you soon.
+      <button id="closeToastBtn" aria-label="Close notification">&times;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const tooltipTriggerList = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')];
+    tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  </script>
+
+</body>
+</html>
